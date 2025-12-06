@@ -1,4 +1,6 @@
 <script>
+import {router} from "@/router.js";
+
 export default {
   name: "LoginPage",
   data() {
@@ -26,11 +28,11 @@ export default {
         this.errors.password = "Not a valid password";
         isValid = false;
       }
-      console.log(isValid);
       if (isValid) {
         this.email = "";
         this.password = "";
       }
+      router.push("/products")
     }
   }
 }
